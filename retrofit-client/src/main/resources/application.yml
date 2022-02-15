@@ -1,0 +1,45 @@
+server:
+  port: 82
+remote:
+  domain: http://localhost:81
+retrofit:
+  # 日志打印配置
+  log:
+    # 日志打印拦截器
+    enable: true
+    # 日志打印拦截器
+    logging-interceptor: com.github.lianjiatech.retrofit.spring.boot.interceptor.DefaultLoggingInterceptor
+    # 全局日志打印级别
+    global-log-level: info
+    # 全局日志打印级别
+    # NONE 不打印日志
+    # BASIC 只打印日志请求记录
+    # HEADERS 打印日志请求记录、请求和响应头信息
+    # BODY 打印日志请求记录、请求和响应头信息、请求和响应体信息
+    global-log-strategy: body
+  # 全局连接超时时间
+  global-connect-timeout-ms: 3000
+  # 全局读取超时时间
+  global-read-timeout-ms: 3000
+  # 全局写入超时时间
+  global-write-timeout-ms: 35000
+  # 全局完整调用超时时间
+  global-call-timeout-ms: 0
+  # 重试配置
+  retry:
+    # 是否启用全局重试
+    enable-global-retry: true
+    # 全局重试间隔时间
+    global-interval-ms: 100
+    # 全局最大重试次数
+    global-max-retries: 2
+    # 全局重试规则
+    # 重试规则global-retry-rules支持如下三种配置
+    # RESPONSE_STATUS_NOT_2XX：响应状态码不是2xx时执行重试；
+    # OCCUR_IO_EXCEPTION：发生IO异常时执行重试；
+    # OCCUR_EXCEPTION：发生任意异常时执行重试。
+    global-retry-rules:
+      - response_status_not_2xx
+      - occur_exception
+    # 重试拦截器
+    retry-interceptor: com.github.lianjiatech.retrofit.spring.boot.retry.DefaultRetryInterceptor
