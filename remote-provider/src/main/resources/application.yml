@@ -4,13 +4,13 @@ spring:
   # spring
   datasource:
     master:
-      jdbc-url: jdbc:mysql://ip:3306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Asia/Shanghai
+      jdbc-url: jdbc:mysql://121.4.170.25:3306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Asia/Shanghai
       username: root
       password: misa0729
       driver-class-name: com.mysql.cj.jdbc.Driver
     slave:
       # 假如slave源只做读操作，可以分配一个只读权限的mysql用户
-      jdbc-url: jdbc:mysql:/ip:3307/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Asia/Shanghai
+      jdbc-url: jdbc:mysql://121.4.170.25:3307/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Asia/Shanghai
       username: root
       password: misa0729
       driver-class-name: com.mysql.cj.jdbc.Driver
