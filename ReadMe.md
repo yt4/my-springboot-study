@@ -10,3 +10,9 @@
    https://www.shuzhiduo.com/A/q4zVryPKzK/
    https://blog.csdn.net/qq_36881887/article/details/110320073
    ```
+3. 2022年3月1日：github上mysql-binlog-connector监控mysql binlog
+   ```
+   参考
+   1. 轮子的github地址：https://github.com/osheroff/mysql-binlog-connector-java
+   2. 文章：https://www.jianshu.com/p/a9dbd3fd52f3
+   ```

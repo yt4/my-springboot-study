@@ -111,6 +111,13 @@ public class MysqlBinlogEventListener {
                 }
 
                 //解析
+                if (eventType.equals(EventType.TABLE_MAP)) {
+                    TableMapEventData data = event.getData();
+                    String table = data.getTable();
+                    long tableId = data.getTableId();
+                    String database = data.getDatabase();
+                    log.info("库名:{},表名:{},表ID:{}", database, table, tableId);
+                }
                 if (EventType.isWrite(eventType)) {
                     //对应insert
                     WriteRowsEventData data = event.getData();
