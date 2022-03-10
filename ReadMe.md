@@ -16,3 +16,5 @@
    1. 轮子的github地址：https://github.com/osheroff/mysql-binlog-connector-java
    2. 文章：https://www.jianshu.com/p/a9dbd3fd52f3
    ```
+   
+4. 2022年3月10日：使用CompletableFuture获取一组提交给自定义线程池处理的任务的返回值
